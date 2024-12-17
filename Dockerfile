@@ -10,9 +10,8 @@ RUN go mod download && go mod verify
 
 COPY ./src ./src
 
-RUN CGO_ENABLED=0 GOOS=linux go build -v -o pipeline-app ./src/
-
-RUN apk add --no-cache ca-certificates
+RUN CGO_ENABLED=0 GOOS=linux go build -v -o pipeline-app ./src/ \
+    && apk add --no-cache ca-certificates
 
 
 # Application image scratch
