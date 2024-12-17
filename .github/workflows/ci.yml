@@ -31,7 +31,7 @@ jobs:
       name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v4.2.1
       with:
-        projectBaseDir: ./
+        projectBaseDir: pipeline-project
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
