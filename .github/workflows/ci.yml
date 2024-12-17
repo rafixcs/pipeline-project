@@ -17,8 +17,8 @@ jobs:
       run: go test -v ./...
 
   build:
-    depends-on: test
-    needs: ubuntu-latest
+    needs: test
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
 
