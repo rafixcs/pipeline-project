@@ -36,9 +36,6 @@ jobs:
       with:
         go-version: '1.22'
 
-    - name: ls
-      run: ls -ltr
-
     - name: Build
       run: go build -v ./...
 
