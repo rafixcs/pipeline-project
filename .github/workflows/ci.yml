@@ -41,7 +41,7 @@ jobs:
 
   docker-build:
     needs: build
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
 
     steps:
       -
